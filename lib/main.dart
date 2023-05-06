@@ -16,7 +16,15 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints){
+
+             print(constraints.minWidth.toInt());
+
+             return const MyHomePage(title: 'Flutter Demo Home Page');
+          },
+
+    ),
     );
   }
 }
